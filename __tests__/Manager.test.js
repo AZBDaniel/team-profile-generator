@@ -1,4 +1,3 @@
-const { expect, test } = require("@jest/globals");
 const Manager = require("../lib/Manager");
 
 test('create manager object', () => {
@@ -19,11 +18,4 @@ test('add role', () => {
     const manager = new Manager("Ryan", 365, "ryanB@gmail.com", role);
 
     expect(manager.getRole()).toBe(role);
-})
-
-// // test getRole
-// test("GitHub responsive", () => {
-//     const testValue = "Manager";
-//     const manager = new Manager("blue", 4, "cory@gmail.com", testValue);
-//     expect(manager.getRole()).toBe(testValue);
-// });
+});
