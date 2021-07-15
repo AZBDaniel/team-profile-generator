@@ -1,4 +1,4 @@
-function generateHtml(data) {
+function buildHtml(data) {
     return `
 <!DOCTYPE html>
 <html lang="en">
@@ -31,4 +31,4 @@ function generateHtml(data) {
 </html>
 `;
 }
-module.exports = generateHtml;
+module.exports = buildHtml;

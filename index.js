@@ -291,7 +291,7 @@ function initHtml() {
         </div>
       `
     })
-    return allTeamMembers;
+    return groupTeamMembers;
 }
 
 // write file function
