@@ -1,4 +1,4 @@
-const inquirer = require("inquirer");
+const { prompt } = require("inquirer");
 const fs = require("fs");
 const buildHtml = require("./src/html-template")
 
