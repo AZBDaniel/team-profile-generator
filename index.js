@@ -220,3 +220,44 @@ function addIntern() {
         return addTeamArry();
     });
 }
+
+//add addiotnal members function
+
+function addTeamArry() {
+    prompt(addTeammate).then((data) => {
+        if (data.addTeammate === "Add another Engineer?") {
+            addEngineer();
+        } else if (data.addTeammate === "Add another Intern?") {
+            addIntern();
+        } else {
+            console.log(teamArry);
+            const teamHtml =
+            initHtml();
+
+            const completedHtml = generateHtml(teamHtml);
+            writeFile("./dist/index.html", completedHtml);
+        }
+    });
+}
+
+// html design function
+function initHtml() {
+
+    let groupTeamMembers = "";
+    teamArry.forEach(employee => {
+        let title = "";
+        let identifyProperty = "";
+        if ("github" in employee) {
+            title = "Engineer"
+            identifyProperty = `<a target="_blank" href="https://www.github.com/${employee.github}"> Github: ${employee.github}</a>`
+        } else if
+        ("school" in employee) {
+            title = "Intern"
+            identifyProperty = `School Name: ${employee.school}`
+        } else if
+        ("officeNumber" in employee) {
+            title = "Manager"
+            identifyProperty = `Office Number: ${employee.officeNumber}`
+        }
+    })
+}
