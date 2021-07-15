@@ -182,3 +182,41 @@ const internQuestions = [
         },
     },
 ];
+
+
+//add Teammate constructor
+//Referenced Jeremy Lentz & Samantha Malone structure
+
+const addTeammate = [
+    {
+        type: "list",
+        message: "Add an additonal Teammate?",
+        name: "addTeammate",
+        choices: [
+            "Add another Engineer?",
+            "Add another Intern?",
+            "Are you Finished adding Teammates",
+        ],
+    },
+];
+
+
+//add additonal engineer from addTeammate
+
+function addEngineer() {
+    prompt(engineerQuestions).then((data) => {
+        const engineer = new Engineer(data.name, data.id, data.email, data.github);
+        teamArry.push(engineer);
+        return addTeamArry();
+    });
+}
+
+//add additional intern from addTeammate
+
+function addIntern() {
+    prompt(internQuestions).then((data) => {
+        const intern = new Intern(data.name, data.id, data.email, data.school);
+        teamArry.push(intern);
+        return addTeamArry();
+    });
+}
