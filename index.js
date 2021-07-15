@@ -248,7 +248,7 @@ function addTeamArry() {
             const teamHtml =
                 initHtml();
 
-            const completedHtml = generateHtml(teamHtml);
+            const completedHtml = buildHtml(teamHtml);
             writeFile("./dist/index.html", completedHtml);
         }
     });
