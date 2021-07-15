@@ -128,4 +128,57 @@ const engineerQuestions = [
 
 // Intern Questions contructor
 
-
+const internQuestions = [
+    {
+        type: "input",
+        message: "Enter the Intern's Name: ",
+        name: "name",
+        validate: (appInput) => {
+            if (appInput) {
+                return true;
+            } else {
+                console.log("Please enter the Intern's Name!");
+                return false;
+            }
+        },
+    },
+    {
+        type: "input",
+        message: "Enter the Intern's ID Number: ",
+        name: "id",
+        validate: (appInput) => {
+            if (appInput) {
+                return true;
+            } else {
+                console.log("Please enter the Intern's Id Number!");
+                return false;
+            }
+        },
+    },
+    {
+        type: "input",
+        message: "Enter the Intern's Email: ",
+        name: "email",
+        validate: (appInput) => {
+            if (appInput) {
+                return true;
+            } else {
+                console.log("Please enter the Inter's Email!");
+                return false;
+            }
+        },
+    },
+    {
+        type: "input",
+        message: "Enter the School the Intern Attends: ",
+        name: "school",
+        validate: (appInput) => {
+            if (appInput) {
+                return true;
+            } else {
+                console.log("Pleases enter the Intern's School Name!");
+                return false;
+            }
+        },
+    },
+];
