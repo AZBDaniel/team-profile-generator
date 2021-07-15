@@ -35,7 +35,7 @@ const managerQuestions = [
             if (appInput) {
                 return true;
             } else {
-                console.log("Please enter the ID Number of the Manager!");
+                console.log("Please enter the Managers ID Number!");
                 return false;
             }
         },
@@ -67,3 +67,65 @@ const managerQuestions = [
         },
     },
 ];
+
+
+// Engineer Questions contructor
+
+const engineerQuestions = [
+    {
+        type: "input",
+        message: "Enter the Engineer's Name: ",
+        name: "name",
+        validate: (appInput) => {
+            if (appInput) {
+                return true;
+            } else {
+                console.log("Please enter the Engineer's Name!");
+                return false;
+            }
+        },
+    },
+    {
+        type: "input",
+        message: "Enter the Engineer's ID Number: ",
+        name: "id",
+        validate: (appInput) => {
+            if (appInput) {
+                return true;
+            } else {
+                console.log("Please enter the Engineer ID Number!");
+                return false;
+            }
+        },
+    },
+    {
+        type: "input",
+        message: "Enter the Engineer's Email: ",
+        name: "email",
+        validate: (appInput) => {
+            if (appInput) {
+                return true;
+            } else {
+                console.log("Please enter the Engineer's Email!");
+                return false;
+            }
+        },
+    },
+    {
+        type: "input",
+        message: "Enter the Engineer's GitHub Username: ",
+        name: "github",
+        validate: (appInput) => {
+            if (appInput) {
+                return true;
+            } else {
+                console.log("Please enter the Engineer's Github Username!");
+                return false;
+            }
+        },
+    },
+];
+
+// Intern Questions contructor
+
+
