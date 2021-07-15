@@ -10,10 +10,11 @@
     "lib": "lib"
   },
   "dependencies": {
-    "inquirer": "^8.1.1",
+    "inquirer": "^8.1.1"
+  },
+  "devDependencies": {
     "jest": "^27.0.6"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AZBDaniel/team-profile-generator.git"
