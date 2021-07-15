@@ -200,6 +200,20 @@ const addTeammate = [
     },
 ];
 
+//intial prompt function
+function askQuestions() {
+    prompt(managerQuestions).then((data) => {
+        const manager = new Manager(
+            data.name,
+            data.id,
+            data.email,
+            data.officeNumber
+        );
+        //push team member information into an array
+        teamArry.push(manager);
+        addTeamArry();
+    });
+}
 
 //add additonal engineer from addTeammate
 
@@ -232,7 +246,7 @@ function addTeamArry() {
         } else {
             console.log(teamArry);
             const teamHtml =
-            initHtml();
+                initHtml();
 
             const completedHtml = generateHtml(teamHtml);
             writeFile("./dist/index.html", completedHtml);
@@ -251,13 +265,46 @@ function initHtml() {
             title = "Engineer"
             identifyProperty = `<a target="_blank" href="https://www.github.com/${employee.github}"> Github: ${employee.github}</a>`
         } else if
-        ("school" in employee) {
+            ("school" in employee) {
             title = "Intern"
             identifyProperty = `School Name: ${employee.school}`
         } else if
-        ("officeNumber" in employee) {
+            ("officeNumber" in employee) {
             title = "Manager"
             identifyProperty = `Office Number: ${employee.officeNumber}`
         }
+
+        //create html car templates
+        groupTeamMembers += `
+      <div class="col">
+            <div class="card" style="width: 18rem">
+                <div class="card-header">
+                <h3>${employee.name}</h3>
+                <h4>${title}</h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item employeeProperties"> Employee ID: <span>${employee.id}</span></li>
+                <a href="mailto:${employee.email}" class="list-group-item employeeProperties"> Email: <span>${employee.email}</span></a>
+                <li class="list-group-item employeeProperties"> <span>${identifyProperty}</span></li>
+                </ul>
+            </div>
+        </div>
+      `
     })
+    return allTeamMembers;
 }
+
+// write file function
+
+function writeFile(file, completedHtmlPage) {
+    fs.writeFile(file, completedHtmlPage, err => {
+        if (err) {
+            console.log("ERROR");
+            return;
+        }
+    });
+}
+
+askQuestions();
+
+module.exports = [teamArry];
