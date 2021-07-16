@@ -249,7 +249,9 @@ function addTeamArry() {
                 initHtml();
 
             const completedHtml = buildHtml(teamHtml);
-            writeFile("./dist/index.html", completedHtml);
+            writeFile("./dist", "index.html", completedHtml);
+            //writeFile("./dist", "style.css", "");
+            fs.copyFileSync("./src/style.css", "./dist/style.css");
         }
     });
 }
@@ -296,10 +298,14 @@ function initHtml() {
 
 // write file function
 
-function writeFile(file, completedHtmlPage) {
-    fs.writeFile(file, completedHtmlPage, err => {
+function writeFile(dir, file, completedHtmlPage) {
+    if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir);
+    } 
+    
+    fs.writeFile(`${dir}/${file}`, completedHtmlPage, err => {
         if (err) {
-            console.log("ERROR");
+            console.log("ERROR", err);
             return;
         }
     });

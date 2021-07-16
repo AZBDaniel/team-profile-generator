@@ -28,7 +28,7 @@ t, and inquiere. At this point navigate to cmd console and change direcotry to t
 npm i , npm jest
 
 ## Walkthrough or Screenshot
-[Walkthrough](https://www.youtube.com/)
+[Walkthrough](https://youtu.be/N_40pUKV0gE)
 
 ## Langauges
 - Javascript
