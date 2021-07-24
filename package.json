@@ -2,7 +2,7 @@
   "name": "team-profile-generator",
   "version": "1.0.0",
   "description": "Challenge 10",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "jest"
   },
@@ -10,7 +10,9 @@
     "lib": "lib"
   },
   "dependencies": {
-    "inquirer": "^8.1.1"
+    "console.table": "^0.10.0",
+    "inquirer": "^8.1.2",
+    "mysql2": "^2.2.5"
   },
   "devDependencies": {
     "jest": "^27.0.6"
