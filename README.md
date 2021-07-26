@@ -1,11 +1,17 @@
-# Team-Profile-Generator
-University of Arizona Challenge 10
+# Employee-Tracker
+University of Arizona Challenge 12
 
 ![MIT](https://img.shields.io/static/v1.svg?label=License&message=MIT&color=Orange)
 
 ## Description
-A node.js inqiuer application that is used in the command prompt to build HTML webpa
-ge that displays a manager team with basic info of the team member, email, github, school easy to access
+A application ran inside the command prompt for view employee by various identifying options. You can also add employee by the same idenitifying options.
+- Role
+- Department
+- Salary
+- Manager
+- First Name
+- Last Name
+- Employee Id
 
 
 ## Table of Contents
@@ -20,26 +26,28 @@ ge that displays a manager team with basic info of the team member, email, githu
 - [Questions](#questions)
 
 ## Usage
-Download zip of my repo team-profile-generator, then install npm, js
-t, and inquiere. At this point navigate to cmd console and change direcotry to the location you stored the zip. Then node
- call index.js, the command prompt will ask questions and then output your built html webpage file
+Download zip or clone my repo Employee-Tracker, then install the software in the Installation sections.
+At this point navigate to cmd console and change direcotry to the location you stored the file. Then node
+ call server.js, the command prompt will ask ask questions that help guide you through the options this applications allows you to do.
 
 ## Installation
-npm i , npm jest
+- npm i
+- npm console.table
+- mpm mysql2
+
 
 ## Walkthrough or Screenshot
-[Walkthrough](https://youtu.be/N_40pUKV0gE)
+[Walkthrough](https://)
 
 ## Langauges
 - Javascript
-- HTML
+- My SQL
 - Node.js
-- CS6
-- CSS
+
 
 
 ## Tests
-npm run test
+No test, but you can run the schema file to build a test table of employees and information.
 
 ## License
 [MIT License](https://opensource.org/licenses/MIT)
@@ -48,8 +56,6 @@ Copyright (c) 2021
 
 ## Credits
 - Jeremy Lentz, GitHub: [jlentz17](https://github.com/jlentz17)
-- Samantha Malone, GitHub: [smalone9](https://github.com/smalone9)
-
 - University of Arizona Ta,s and Tutors
 
 ## Questions
