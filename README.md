@@ -37,7 +37,7 @@ At this point navigate to cmd console and change direcotry to the location you s
 
 
 ## Walkthrough or Screenshot
-[Walkthrough](https://)
+[Walkthrough](https://youtu.be/gIsI1C6-zmw)
 
 ## Langauges
 - Javascript
